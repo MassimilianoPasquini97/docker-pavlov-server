@@ -24,5 +24,9 @@ Example below
 docker run -d -p 7:7/udp -p 7000:7000/udp -p 7777:7777/udp -p 7200:7200/udp  -v pavlov_server:/home/pavlov/pavlov-server --name server-pavlov massimilianopasquini/pavlov-server:latest 
 ```
 
-#### Build Image
-docker build -t pavlov-server:latest .
+# Docker Compose
+To facilitate the start of the containers it is possible to use the docker compose files present in the Example directory.
+
+```bash
+sudo docker-compose up -d pavlov-server
+```

@@ -1,0 +1,29 @@
+version: "3.5"
+services:
+  pavlov-server:
+    image: massimilianopasquini/pavlov-server:latest
+    container_name: pavlov-server
+    restart: on-failure
+    volumes:
+      - type: volume
+        source: Game.ini-pavlov-server
+        target: /home/pavlov/pavlov-server/Pavlov/Saved/Config/LinuxServer
+    ports:
+      - target: 7
+        published: 7
+        protocol: udp
+        mode: host
+      - target: 7000
+        published: 7000
+        protocol: udp
+        mode: host
+      - target: 7200
+        published: 7200
+        protocol: udp
+        mode: host
+      - target: 7777
+        published: 7777
+        protocol: udp
+        mode: host
+volumes:
+  Game.ini-pavlov-server:
