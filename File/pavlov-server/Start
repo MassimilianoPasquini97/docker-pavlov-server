@@ -1,0 +1,5 @@
+#!/bin/bash
+
+su pavlov -c 'steamcmd +runscript /home/pavlov/pavlov-server/pavlov_server_update'
+cd /home/pavlov/pavlov-server
+su pavlov -c './PavlovServer.sh'
